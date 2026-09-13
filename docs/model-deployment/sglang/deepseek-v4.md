@@ -17,7 +17,7 @@ DeepSeek-V4 是 DeepSeek 系列的混合专家模型。本页汇总 DeepSeek-V4 
 | [hygon/DeepSeek-V4-Pro-Channel-INT8-w8a8](https://www.modelscope.cn/models/hygon/DeepSeek-V4-Pro-Channel-INT8-w8a8) | INT8 W8A8 | [0.5.12](../docker_images.md) | BW1000 | 32 | IFB | [**`>_`**](#deepseek-v4-pro-channel-int8-w8a8-ifb-bw1000-32x-sglang-0512) |
 | [hygon/DeepSeek-V4-Pro-Channel-FP8-w8a8](https://www.modelscope.cn/models/hygon/DeepSeek-V4-Pro-Channel-FP8-w8a8) | FP8 W8A8 | 0.5.12 | BW1100 | 16 | IFB(CP8EP8PP2) | [**`>_`**](#deepseek-v4-pro-channel-fp8-w8a8-ifb-p-bw1100-16x-sglang-0512) |
 |  | FP8 W8A8 | 0.5.12 | BW1100 | 16 | IFB(EP16DP16) | [**`>_`**](#deepseek-v4-pro-channel-fp8-w8a8-ifb-d-bw1100-16x-sglang-0512) |
-|  | FP8 W8A8 | 0.5.12 | BW1100 | 16 | IFB(EP16DP16) | [**`>_`**](#deepseek-v4-pro-channel-fp8-w8a8-ifb-mtp314-bw1100-16x-sglang-0512) |
+|  | FP8 W8A8 | [0.5.12](../docker_images.md) | BW1100 | 16 | IFB(EP16DP16-MTP314) | [**`>_`**](#deepseek-v4-pro-channel-fp8-w8a8-ifb-bw1100-16x-sglang-0512-ep16dp16-mtp314) |
 |  | FP8 W8A8 | 0.5.12 | BW1100 | 32 | PD | [**`>_`**](#deepseek-v4-pro-channel-fp8-w8a8-pd-bw1100-32x-sglang-0512) |
 |  | FP8 W8A8 | [0.5.12](../docker_images.md) | scaleX40-3G | 32 | PD | [**`>_`**](#deepseek-v4-pro-channel-fp8-w8a8-pd-scalex40-3g-32x-sglang-0512) |
 
@@ -1447,7 +1447,7 @@ sglang serve \
   "$@"
 ```
 
-### DeepSeek-V4-Pro-Channel-FP8-w8a8 IFB MTP314 BW1100 16x SGLang 0.5.12
+### DeepSeek-V4-Pro-Channel-FP8-w8a8 IFB BW1100 16x SGLang 0.5.12 (EP16DP16-MTP314)
 
 #### Node 0
 
@@ -1496,7 +1496,6 @@ export SGLANG_USE_DPSKV4_LIGHTOP_QUANT_K_CACHE=1
 export SGLANG_USE_DPSKV4_LIGHTOP_RMSNORM=1
 export SGLANG_USE_FP8_W8A8_MOE=1
 export SGLANG_USE_DEEPGEMM_MOE=1
-export SGLANG_ROCM_USE_AITER_MOE=1
 export SGLANG_OPT_USE_FUSED_STORE_CACHE="${SGLANG_OPT_USE_FUSED_STORE_CACHE:-false}"
 export SGLANG_OPT_USE_FUSED_HASH_TOPK="${SGLANG_OPT_USE_FUSED_HASH_TOPK:-true}"
 export SGLANG_OPT_SWIGLU_CLAMP_FUSION="${SGLANG_OPT_SWIGLU_CLAMP_FUSION:-false}"
@@ -1515,10 +1514,10 @@ export SGLANG_APPLY_CONFIG_BACKUP="${SGLANG_APPLY_CONFIG_BACKUP:-none}"
 export SGLANG_USE_LIGHTOP_EP_SCATTER=false
 export SGLANG_USE_LIGHTOP_EP_GATHER=false
 export SGLANG_USE_LIGHTOP_EP_MOE_ALIGN=false
-export PP="${PP:-1}"
 
 sglang serve \
   --model-path hygon/DeepSeek-V4-Pro-Channel-FP8-w8a8 \
+  --tokenizer-path hygon/DeepSeek-V4-Pro-Channel-FP8-w8a8 \
   --tp-size 16 \
   --ep-size 16 \
   --dp-size 16 \
@@ -1594,7 +1593,6 @@ export SGLANG_USE_DPSKV4_LIGHTOP_QUANT_K_CACHE=1
 export SGLANG_USE_DPSKV4_LIGHTOP_RMSNORM=1
 export SGLANG_USE_FP8_W8A8_MOE=1
 export SGLANG_USE_DEEPGEMM_MOE=1
-export SGLANG_ROCM_USE_AITER_MOE=1
 export SGLANG_OPT_USE_FUSED_STORE_CACHE="${SGLANG_OPT_USE_FUSED_STORE_CACHE:-false}"
 export SGLANG_OPT_USE_FUSED_HASH_TOPK="${SGLANG_OPT_USE_FUSED_HASH_TOPK:-true}"
 export SGLANG_OPT_SWIGLU_CLAMP_FUSION="${SGLANG_OPT_SWIGLU_CLAMP_FUSION:-false}"
@@ -1613,10 +1611,10 @@ export SGLANG_APPLY_CONFIG_BACKUP="${SGLANG_APPLY_CONFIG_BACKUP:-none}"
 export SGLANG_USE_LIGHTOP_EP_SCATTER=false
 export SGLANG_USE_LIGHTOP_EP_GATHER=false
 export SGLANG_USE_LIGHTOP_EP_MOE_ALIGN=false
-export PP="${PP:-1}"
 
 sglang serve \
   --model-path hygon/DeepSeek-V4-Pro-Channel-FP8-w8a8 \
+  --tokenizer-path hygon/DeepSeek-V4-Pro-Channel-FP8-w8a8 \
   --tp-size 16 \
   --ep-size 16 \
   --dp-size 16 \
@@ -1624,7 +1622,7 @@ sglang serve \
   --enable-dp-attention \
   --enable-dp-lm-head \
   --nnodes 2 \
-  --node-rank 0 \
+  --node-rank 1 \
   --dist-init-addr <node0_ip>:<port0>  \
   --dist-timeout 10000 \
   --watchdog-timeout 3600 \
@@ -1942,7 +1940,6 @@ export SGLANG_DSV4_SPLIT_PREFILL_DECODE_MLA="${SGLANG_DSV4_SPLIT_PREFILL_DECODE_
 export SGLANG_DSV4_SPLIT_HCA_NONSPARSE_MLA="${SGLANG_DSV4_SPLIT_HCA_NONSPARSE_MLA:-false}"
 export SGLANG_DSV4_SPARSE_PREFILL_SINGLE_CALL="${SGLANG_DSV4_SPARSE_PREFILL_SINGLE_CALL:-false}"
 export SGLANG_DSV4_SPARSE_PREFILL_TRITON_GATHER="${SGLANG_DSV4_SPARSE_PREFILL_TRITON_GATHER:-false}"
-export SGLANG_JIT_DEEPGEMM_PRECOMPILE="${SGLANG_JIT_DEEPGEMM_PRECOMPILE:-0}"
 export SGLANG_DISABLED_MODEL_ARCHS="${SGLANG_DISABLED_MODEL_ARCHS:-midashenglm}"
 export SGLANG_DEBUG_DSV4_LOAD="${SGLANG_DEBUG_DSV4_LOAD:-0}"
 export SGLANG_APPLY_CONFIG_BACKUP="${SGLANG_APPLY_CONFIG_BACKUP:-none}"
