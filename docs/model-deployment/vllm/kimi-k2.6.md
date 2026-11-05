@@ -10,7 +10,7 @@
 | -------- | -------- | --------- | -------- | ---- | -------- | -------- |
 | [moonshotai/Kimi-K2.6](https://www.modelscope.cn/models/moonshotai/Kimi-K2.6) | INT4 W4A16 | [0.28.1](../docker_images.md#vllm-0281) | BW1100 | 8 | IFB | [**`>_`**](#kimi-k26-ifb-bw1100-8x-vllm-0281) |
 |  | INT4 W4A16 | [0.28.1](../docker_images.md#vllm-0281) | BW1000 | 8 | IFB | [**`>_`**](#kimi-k26-ifb-bw1000-8x-vllm-0281) |
-|  | INT4 W4A16 | [0.28.1](../docker_images.md#vllm-0281) | sf_b075 | 8 | IFB | [**`>_`**](#kimi-k26-ifb-sf_b075-8x-vllm-0281) |
+|  | INT4 W4A16 | [0.28.1](../docker_images.md#vllm-0281-sf_b075) | sf_b075 | 8 | IFB | [**`>_`**](#kimi-k26-ifb-sf_b075-8x-vllm-0281) |
 |  | INT4 W4A16 | [0.28.1](../docker_images.md#vllm-0281) | BW100 | 8 | IFB | [**`>_`**](#kimi-k26-ifb-bw100-8x-vllm-0281) |
 |  | INT4 W4A16 | [0.28.1](../docker_images.md#vllm-0281) | K100_AI | 8 | IFB | [**`>_`**](#kimi-k26-ifb-k100_ai-8x-vllm-0281) |
 
@@ -66,10 +66,10 @@ vllm serve moonshotai/Kimi-K2.6 \
 
 ### Kimi-K2.6 IFB sf_b075 8x vLLM 0.28.1
 
-镜像标签（展示占位，正式地址待确认），详见 [镜像列表](../docker_images.md#vllm-0281)
+镜像标签（展示占位，正式地址待确认），详见 [镜像列表](../docker_images.md#vllm-0281-sf_b075)
 
 ```text
-harbor.sourcefind.cn:5443/hcu/admin/base/vllm:0.28.1-ubuntu22.04-dtk2604-py3.10
+harbor.sourcefind.cn:5443/hcu/admin/base/vllm:0.28.1-ubuntu22.04-dtk2604-py3.10-sf_b075
 ```
 
 ```bash
