@@ -2,19 +2,19 @@
 
 ## 模型简介
 
-本文提供 Kimi-K2.6 在 BW1100、BW1000 和 K100_AI 上的 vLLM 0.28.1 部署命令，以及 sf_b075 和 BW100 的 vLLM 0.28.1 展示示例。
+本文提供 Kimi-K2.6 在 BW1100、BW1000+mlx 和 K100_AI 上的 vLLM 0.28.1 部署命令，以及 BW1000+shca 和 BW100 的 vLLM 0.28.1 展示示例。
 
 ## 模型列表
 
 | 模型权重 | 量化方式 | vLLM 镜像 | 推荐硬件 | 卡数 | 部署方式 | 启动命令 |
 | -------- | -------- | --------- | -------- | ---- | -------- | -------- |
 | [moonshotai/Kimi-K2.6](https://www.modelscope.cn/models/moonshotai/Kimi-K2.6) | INT4 W4A16 | [0.28.1](../docker_images.md#vllm-0281) | BW1100 | 8 | IFB | [**`>_`**](#kimi-k26-ifb-bw1100-8x-vllm-0281) |
-|  | INT4 W4A16 | [0.28.1](../docker_images.md#vllm-0281) | BW1000 | 8 | IFB | [**`>_`**](#kimi-k26-ifb-bw1000-8x-vllm-0281) |
-|  | INT4 W4A16 | [0.28.1](../docker_images.md#vllm-0281-sf_b075) | sf_b075 | 8 | IFB | [**`>_`**](#kimi-k26-ifb-sf_b075-8x-vllm-0281) |
+|  | INT4 W4A16 | [0.28.1](../docker_images.md#vllm-0281) | BW1000+mlx | 8 | IFB | [**`>_`**](#kimi-k26-ifb-bw1000mlx-8x-vllm-0281) |
+|  | INT4 W4A16 | [0.28.1](../docker_images.md#vllm-0281-bw1000-shca) | BW1000+shca | 8 | IFB | [**`>_`**](#kimi-k26-ifb-bw1000shca-8x-vllm-0281) |
 |  | INT4 W4A16 | [0.28.1](../docker_images.md#vllm-0281) | BW100 | 8 | IFB | [**`>_`**](#kimi-k26-ifb-bw100-8x-vllm-0281) |
 |  | INT4 W4A16 | [0.28.1](../docker_images.md#vllm-0281) | K100_AI | 8 | IFB | [**`>_`**](#kimi-k26-ifb-k100_ai-8x-vllm-0281) |
 
-> sf_b075 和 BW100 的启动命令沿用 BW1000 的参数，仅作展示示例，待实机验证。
+> BW1000+shca 和 BW100 的启动命令沿用 BW1000+mlx 的参数，仅作展示示例，待实机验证。
 
 ## 启动命令
 
@@ -36,7 +36,7 @@ vllm serve moonshotai/Kimi-K2.6 \
   --max-num-seqs 64
 ```
 
-### Kimi-K2.6 IFB BW1000 8x vLLM 0.28.1
+### Kimi-K2.6 IFB BW1000+mlx 8x vLLM 0.28.1
 
 ```bash
 export NCCL_GRAPH_MIXING_SUPPORT=1
@@ -64,9 +64,9 @@ vllm serve moonshotai/Kimi-K2.6 \
   --max-num-seqs 64
 ```
 
-### Kimi-K2.6 IFB sf_b075 8x vLLM 0.28.1
+### Kimi-K2.6 IFB BW1000+shca 8x vLLM 0.28.1
 
-镜像标签（展示占位，正式地址待确认），详见 [镜像列表](../docker_images.md#vllm-0281-sf_b075)
+镜像标签（展示占位，正式地址待确认），详见 [镜像列表](../docker_images.md#vllm-0281-bw1000-shca)
 
 ```text
 harbor.sourcefind.cn:5443/hcu/admin/base/vllm:0.28.1-ubuntu22.04-dtk2604-py3.10-sf_b075
