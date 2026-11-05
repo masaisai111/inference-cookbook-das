@@ -2,7 +2,7 @@
 
 ## 模型简介
 
-本文提供 Kimi-K2.6 在 BW1100、BW1000 和 K100_AI 上的 vLLM 0.28.1 部署命令，以及 sf_b075 和 BW100 的 vLLM 0.21.0 展示示例。
+本文提供 Kimi-K2.6 在 BW1100、BW1000 和 K100_AI 上的 vLLM 0.28.1 部署命令，以及 sf_b075 和 BW100 的 vLLM 0.28.1 展示示例。
 
 ## 模型列表
 
@@ -10,8 +10,8 @@
 | -------- | -------- | --------- | -------- | ---- | -------- | -------- |
 | [moonshotai/Kimi-K2.6](https://www.modelscope.cn/models/moonshotai/Kimi-K2.6) | INT4 W4A16 | 0.28.1 | BW1100 | 8 | IFB | [**`>_`**](#kimi-k26-ifb-bw1100-8x-vllm-0281) |
 |  | INT4 W4A16 | 0.28.1 | BW1000 | 8 | IFB | [**`>_`**](#kimi-k26-ifb-bw1000-8x-vllm-0281) |
-|  | INT4 W4A16 | 0.21.0 | sf_b075 | 8 | IFB | [**`>_`**](#kimi-k26-ifb-sf_b075-8x-vllm-0210) |
-|  | INT4 W4A16 | 0.21.0 | BW100 | 8 | IFB | [**`>_`**](#kimi-k26-ifb-bw100-8x-vllm-0210) |
+|  | INT4 W4A16 | 0.28.1 | sf_b075 | 8 | IFB | [**`>_`**](#kimi-k26-ifb-sf_b075-8x-vllm-0281) |
+|  | INT4 W4A16 | 0.28.1 | BW100 | 8 | IFB | [**`>_`**](#kimi-k26-ifb-bw100-8x-vllm-0281) |
 |  | INT4 W4A16 | 0.28.1 | K100_AI | 8 | IFB | [**`>_`**](#kimi-k26-ifb-k100_ai-8x-vllm-0281) |
 
 > sf_b075 和 BW100 的启动命令沿用 BW1000 的参数，仅作展示示例，待实机验证。
@@ -64,12 +64,12 @@ vllm serve moonshotai/Kimi-K2.6 \
   --max-num-seqs 64
 ```
 
-### Kimi-K2.6 IFB sf_b075 8x vLLM 0.21.0
+### Kimi-K2.6 IFB sf_b075 8x vLLM 0.28.1
 
-参考镜像：
+镜像标签（展示占位，正式地址待确认）
 
-```bash
-docker pull harbor.sourcefind.cn:5443/hcu/admin/base/vllm:0.21.0-ubuntu22.04-dtk2604-py3.10
+```text
+harbor.sourcefind.cn:5443/hcu/admin/base/vllm:0.28.1-ubuntu22.04-dtk2604-py3.10
 ```
 
 ```bash
@@ -98,12 +98,12 @@ vllm serve moonshotai/Kimi-K2.6 \
   --max-num-seqs 64
 ```
 
-### Kimi-K2.6 IFB BW100 8x vLLM 0.21.0
+### Kimi-K2.6 IFB BW100 8x vLLM 0.28.1
 
-参考镜像：
+镜像标签（展示占位，正式地址待确认）
 
-```bash
-docker pull harbor.sourcefind.cn:5443/hcu/admin/base/vllm:0.21.0-ubuntu22.04-dtk2604-py3.10
+```text
+harbor.sourcefind.cn:5443/hcu/admin/base/vllm:0.28.1-ubuntu22.04-dtk2604-py3.10
 ```
 
 ```bash

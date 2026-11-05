@@ -286,7 +286,7 @@
     <tr>
       <td rowspan="2">Kimi-K2.6</td>
       <td>vLLM</td>
-      <td align="center">-</td><td align="center"><a href="docs/model-deployment/vllm/kimi-k2.6.md">✅</a></td><td align="center"><a href="docs/model-deployment/vllm/kimi-k2.6.md#kimi-k26-ifb-sf_b075-8x-vllm-0210">示例</a></td><td align="center"><a href="docs/model-deployment/vllm/kimi-k2.6.md#kimi-k26-ifb-bw100-8x-vllm-0210">示例</a></td><td align="center"><a href="docs/model-deployment/vllm/kimi-k2.6.md">✅</a></td>
+      <td align="center">-</td><td align="center"><a href="docs/model-deployment/vllm/kimi-k2.6.md">✅</a></td><td align="center"><a href="docs/model-deployment/vllm/kimi-k2.6.md#kimi-k26-ifb-sf_b075-8x-vllm-0281">示例</a></td><td align="center"><a href="docs/model-deployment/vllm/kimi-k2.6.md#kimi-k26-ifb-bw100-8x-vllm-0281">示例</a></td><td align="center"><a href="docs/model-deployment/vllm/kimi-k2.6.md">✅</a></td>
     </tr>
     <tr>
       <td>SGLang</td>
