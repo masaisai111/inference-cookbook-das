@@ -6,7 +6,7 @@
 
 ## 模型列表
 
-| 模型权重 | 量化方式 | vLLM 镜像 | 推荐硬件 | 卡数 | 网卡类型 | 部署方式 | 启动命令 |
+| 模型权重 | 量化方式 | vLLM 镜像 | 推荐硬件 | 网卡类型 | 卡数 | 部署方式 | 启动命令 |
 | -------- | -------- | --------- | -------- | ---- | ---- | -------- | -------- |
 | [moonshotai/Kimi-K2.6](https://www.modelscope.cn/models/moonshotai/Kimi-K2.6) | INT4 W4A16 | [0.28.1](../docker_images.md#vllm-0281) | BW1100 | mlx | 8 | IFB | [**`>_`**](#kimi-k26-ifb-bw1100-8x-vllm-0281) |
 |  | INT4 W4A16 | [0.28.1](../docker_images.md#vllm-0281) | BW1000 | mlx | 8 | IFB | [**`>_`**](#kimi-k26-ifb-bw1000-8x-vllm-0281) |
