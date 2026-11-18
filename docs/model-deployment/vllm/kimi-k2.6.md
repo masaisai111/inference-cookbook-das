@@ -10,7 +10,7 @@
 | -------- | -------- | --------- | -------- | ---- | ---- | -------- | -------- |
 | [moonshotai/Kimi-K2.6](https://www.modelscope.cn/models/moonshotai/Kimi-K2.6) | INT4 W4A16 | [0.28.1](../docker_images.md#vllm-0281) | BW1100 | mlx | 8 | IFB | [**`>_`**](#kimi-k26-ifb-bw1100-8x-vllm-0281) |
 |  | INT4 W4A16 | [0.28.1](../docker_images.md#vllm-0281) | BW1000 | mlx | 8 | IFB | [**`>_`**](#kimi-k26-ifb-bw1000-8x-vllm-0281) |
-|  | INT4 W4A16 | [0.28.1](../docker_images.md#vllm-0281-sf_b075) | BW1100 | shca  | 8 | IFB | [**`>_`**](#kimi-k26-ifb-sf_b075-8x-vllm-0281) |
+|  | INT4 W4A16 | [0.28.1](../docker_images.md#vllm-0281-sf_b075) | BW1000 | shca  | 8 | IFB | [**`>_`**](#kimi-k26-ifb-sf_b075-8x-vllm-0281) |
 |  | INT4 W4A16 | [0.28.1](../docker_images.md#vllm-0281) | BW100 | mlx | 8 | IFB | [**`>_`**](#kimi-k26-ifb-bw100-8x-vllm-0281) |
 |  | INT4 W4A16 | [0.28.1](../docker_images.md#vllm-0281) | K100_AI | mlx | 8 | IFB | [**`>_`**](#kimi-k26-ifb-k100_ai-8x-vllm-0281) |
 
