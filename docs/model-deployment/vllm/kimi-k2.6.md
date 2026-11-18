@@ -6,13 +6,13 @@
 
 ## 模型列表
 
-| 模型权重 | 量化方式 | vLLM 镜像 | 推荐硬件 | 卡数 | 部署方式 | 启动命令 |
-| -------- | -------- | --------- | -------- | ---- | -------- | -------- |
-| [moonshotai/Kimi-K2.6](https://www.modelscope.cn/models/moonshotai/Kimi-K2.6) | INT4 W4A16 | [0.28.1](../docker_images.md#vllm-0281) | BW1100 | 8 | IFB | [**`>_`**](#kimi-k26-ifb-bw1100-8x-vllm-0281) |
-|  | INT4 W4A16 | [0.28.1](../docker_images.md#vllm-0281) | BW1000 | 8 | IFB | [**`>_`**](#kimi-k26-ifb-bw1000-8x-vllm-0281) |
-|  | INT4 W4A16 | [0.28.1](../docker_images.md#vllm-0281-sf_b075) | sf_b075 | 8 | IFB | [**`>_`**](#kimi-k26-ifb-sf_b075-8x-vllm-0281) |
-|  | INT4 W4A16 | [0.28.1](../docker_images.md#vllm-0281) | BW100 | 8 | IFB | [**`>_`**](#kimi-k26-ifb-bw100-8x-vllm-0281) |
-|  | INT4 W4A16 | [0.28.1](../docker_images.md#vllm-0281) | K100_AI | 8 | IFB | [**`>_`**](#kimi-k26-ifb-k100_ai-8x-vllm-0281) |
+| 模型权重 | 量化方式 | vLLM 镜像 | 推荐硬件 | 卡数 | 网卡类型 | 部署方式 | 启动命令 |
+| -------- | -------- | --------- | -------- | ---- | ---- | -------- | -------- |
+| [moonshotai/Kimi-K2.6](https://www.modelscope.cn/models/moonshotai/Kimi-K2.6) | INT4 W4A16 | [0.28.1](../docker_images.md#vllm-0281) | BW1100 | mlx | 8 | IFB | [**`>_`**](#kimi-k26-ifb-bw1100-8x-vllm-0281) |
+|  | INT4 W4A16 | [0.28.1](../docker_images.md#vllm-0281) | BW1000 | mlx | 8 | IFB | [**`>_`**](#kimi-k26-ifb-bw1000-8x-vllm-0281) |
+|  | INT4 W4A16 | [0.28.1](../docker_images.md#vllm-0281-sf_b075) | scha | BW1100  | 8 | IFB | [**`>_`**](#kimi-k26-ifb-sf_b075-8x-vllm-0281) |
+|  | INT4 W4A16 | [0.28.1](../docker_images.md#vllm-0281) | BW100 | mlx | 8 | IFB | [**`>_`**](#kimi-k26-ifb-bw100-8x-vllm-0281) |
+|  | INT4 W4A16 | [0.28.1](../docker_images.md#vllm-0281) | K100_AI | mlx | 8 | IFB | [**`>_`**](#kimi-k26-ifb-k100_ai-8x-vllm-0281) |
 
 > sf_b075 和 BW100 的启动命令沿用 BW1000 的参数，仅作展示示例，待实机验证。
 
