@@ -1,4 +1,4 @@
-| 框架 | 版本号 | 适用硬件 | 适用网卡类型 | 推荐镜像 |
+| 框架 | 版本号 | 适用硬件 | 网卡 | 推荐镜像 |
 | --- | --- | --- | --- |--- |
 | vLLM | 0.15 | BW1100 / BW1000 / K100_AI | mlx | `docker pull harbor.sourcefind.cn:5443/hcu/admin/base/vllm:0.15.1-ubuntu22.04-dtk26.04-py3.10` |
 | vLLM | 0.18 | BW1100 / BW1000 / K100_AI | mlx | `docker pull harbor.sourcefind.cn:5443/hcu/admin/base/vllm:0.18.1-ubuntu22.04-dtk26.04-py3.10` |
