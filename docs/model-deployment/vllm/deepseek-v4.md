@@ -1628,7 +1628,6 @@ vllm serve hygon/DeepSeek-V4-Pro-0813-Channel-INT4-w4a8 \
 
 ```bash
 export NCCL_GRAPH_MIXING_SUPPORT=1
-export VLLM_HCU_BF16_FP32_MMAC=0
 
 vllm serve hygon/DeepSeek-V4-Pro-0813-Channel-INT4-w4a8 \
   --trust-remote-code \
@@ -1652,7 +1651,7 @@ vllm serve hygon/DeepSeek-V4-Pro-0813-Channel-INT4-w4a8 \
   --reasoning-parser deepseek_v4 \
   --default-chat-template-kwargs '{"reasoning_effort":"low"}' \
   --gpu-memory-utilization 0.96 \
-  --max-model-len 143360 \
+  --max-model-len 131072 \
   --max-num-batched-tokens 1024 \
   --max-num-seqs 64 \
   --max-cudagraph-capture-size 16
@@ -1662,7 +1661,6 @@ vllm serve hygon/DeepSeek-V4-Pro-0813-Channel-INT4-w4a8 \
 
 ```bash
 export NCCL_GRAPH_MIXING_SUPPORT=1
-export VLLM_HCU_BF16_FP32_MMAC=0
 
 vllm serve hygon/DeepSeek-V4-Pro-0813-Channel-INT4-w4a8 \
   --trust-remote-code \
@@ -1687,7 +1685,7 @@ vllm serve hygon/DeepSeek-V4-Pro-0813-Channel-INT4-w4a8 \
   --reasoning-parser deepseek_v4 \
   --default-chat-template-kwargs '{"reasoning_effort":"low"}' \
   --gpu-memory-utilization 0.96 \
-  --max-model-len 143360 \
+  --max-model-len 131072 \
   --max-num-batched-tokens 1024 \
   --max-num-seqs 64 \
   --max-cudagraph-capture-size 16
